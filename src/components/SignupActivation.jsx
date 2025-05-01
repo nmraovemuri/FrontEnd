@@ -2,10 +2,12 @@ import React from 'react';
 import { useCustomerSignupActivateQuery } from '../services/customerApi';
 import HeaderOne from './HeaderOne';
 import FooterOne from './FooterOne';
+import { useEffect } from 'react';
 
 const SignupActivation = () => {
   // Trigger email activation (API call)
   useCustomerSignupActivateQuery();
+   // Store "signedup" status on successful activation   
 
   return (
     <>

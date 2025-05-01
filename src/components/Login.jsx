@@ -50,7 +50,9 @@ const Login = () => {
     
         setMessage('Login successful! Redirecting...');
         setSuccess(true);
-        setLoginData({ usernameOrEmail: '', password: '' });
+        setLoginData({ usernameOrEmail: '', password: '' });        
+        localStorage.setItem('signedup', "true");     
+      
         navigate('/');
       } else {
         setMessage('Please verify your email before login.');
