@@ -46,7 +46,7 @@ import Logout from "./components/Logout"
 import MyProfile from "./components/MyProfile";
 import ChangePassword from "./components/ChangePassword";
 import ResetPassword from "./components/ResetPassword";
-import Navigation from "./components/Navigation";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -145,7 +145,7 @@ const router = createBrowserRouter([
         element: <RefundPolicy/>,
       },
       {
-        path: "/signupactivation",
+        path: "/signup-activation-status",
         element: <SignupActivation/>,
       },
       {
@@ -184,10 +184,7 @@ const router = createBrowserRouter([
         path: "/changepassword",
         element: <ChangePassword/>,
       },
-      {
-        path: "/navigation",
-        element: <Navigation/>,
-      },
+     
     ]
   }
 ]);

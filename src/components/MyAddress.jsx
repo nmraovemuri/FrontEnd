@@ -100,8 +100,11 @@ const MyAddress = () => {
 
     try {
       const payload = { customer_id: customerId, customer_address: tempCustomerAddress };
+     
+
       const response = await updateCustomerAddress(payload).unwrap();
-      if (response.status === 'success') {
+      console.log(response)
+      if (response.status === 'succes') {
         setCustomerAddress(tempCustomerAddress);
         alert('Address updated successfully!');
       } else {

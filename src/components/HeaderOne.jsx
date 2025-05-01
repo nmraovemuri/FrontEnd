@@ -6,6 +6,9 @@ import { useFormik } from "formik";
 import './HeaderOne.css';
 
 const HeaderOne = () => {
+  const [firstName, setFirstName] = useState('');
+ 
+  const [signup, setSignup] =useState(false)
   var navigate=useNavigate()
   const [scroll, setScroll] = useState(false);
   var {isLoading,data}=useGetAllSubCategoriesByCategoriesQuery()
@@ -18,14 +21,26 @@ const HeaderOne = () => {
         navigate(`/search/${values.searchtext}`)
     },
   });
+
   // Set scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScroll(window.pageYOffset > 150);
     };
+    let signupValue = localStorage.getItem("signedup")
+    const storedFirstName = localStorage.getItem("first_name");
+    console.log("signupValue", signupValue, typeof signupValue)
+    if(signupValue == "true"){
+      alert()
+      setSignup(true)
+    } 
+    if (storedFirstName) {
+      setFirstName(storedFirstName);
+    } 
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
     
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
   }, []);
   
   // Initialize Select2
@@ -239,18 +254,26 @@ const HeaderOne = () => {
                     <i className='ph ph-magnifying-glass' />
                   </span>
                 </button>
-                <Link to='/login' className='flex-align gap-4 item-hover'>
-                <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
-                  <i className='mdi mdi-account-circle' /></span>
-                <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>
-                  Login</span>
-              </Link>
-                <Link to='/register' className='flex-align gap-4 item-hover'>
-                <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
-                  <i className='mdi mdi-account-circle' /></span>
-                <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>
-                  Register</span>
-              </Link>
+                { !signup && (
+                  <Link to='/login' className='flex-align gap-4 item-hover'>
+                  <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
+                    <i className='mdi mdi-account-circle' /></span>
+                  <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>
+                    Login</span>
+                </Link>
+                )
+
+                }
+                {!signup && (
+                  <Link to='/register' className='flex-align gap-4 item-hover'>
+                  <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
+                    <i className='mdi mdi-account-circle' /></span>
+                  <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>
+                    Register</span>
+                </Link>
+                )
+                }
+                
                 <Link to='/cart' className='flex-align gap-4 item-hover'>
                   <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
                     <i className='mdi mdi-cart' />
@@ -264,7 +287,7 @@ const HeaderOne = () => {
                 <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
                   <i className='ph ph-user' /></span>
                 <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>
-                  My Address</span>
+                {firstName}</span>
               </Link>
 
               </div>
@@ -340,7 +363,9 @@ const HeaderOne = () => {
 
             {/* Header Right */}
             <div className='header-right flex-align'>
-             
+            {/* <Link to='/tel:+91-9989-385-332' className='bg-main-600 text-white p-12 h-100 hover-bg-main-800 flex-align gap-8 text-lg d-lg-flex d-none'>
+                <div className='d-flex text-32'><i className='ph ph-phone-call' /></div> +91-9989 385 332
+              </Link> */}
               <div className='me-16 d-lg-none d-block'>
                 <div className='flex-align flex-wrap gap-12'>
                   <button onClick={toggleSearch} type='button' className='search-icon flex-align d-lg-none d-flex gap-4 item-hover'>
