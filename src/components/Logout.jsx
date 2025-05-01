@@ -9,7 +9,7 @@ const Logout = () => {
     localStorage.removeItem('customer_id'); 
 
     // Redirect to login page
-    navigate('/');
+    navigate('/account');
   }, [navigate]);
 
   return null;

@@ -34,7 +34,7 @@ const ProductDetailsPageOne = () => {
 
       {/* <BreadcrumbTwo title={"Product Details"} /> */}
 
-      <BreadcrumbTwo title={"Product Details"} />
+      {/* <BreadcrumbTwo title={"Product Details"} /> */}
 
 
       {/* ProductDetailsOne */}
@@ -44,7 +44,7 @@ const ProductDetailsPageOne = () => {
 
       {/* <NewArrivalTwo /> */}
 
-      <NewArrivalTwo />
+      {/* <NewArrivalTwo /> */}
 
 
       {/* ShippingOne */}
@@ -54,7 +54,7 @@ const ProductDetailsPageOne = () => {
 
       {/* <NewsletterOne /> */}
 
-      <NewsletterOne />
+      {/* <NewsletterOne /> */}
 
 
       {/* FooterTwo */}

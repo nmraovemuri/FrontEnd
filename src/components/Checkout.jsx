@@ -1,4 +1,7 @@
 
+
+
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useUpdateCustomerAddressMutation } from '../services/customerApi';
@@ -8,7 +11,9 @@ const Checkout = () => {
   const [customer_id, setCustomerId] = useState("");
 
   const [address, setAddress] = useState({
-    
+    first_name: '',
+    last_name: '',
+    email_id: '',
     mobile: '',
     addr_field1: '',
     addr_field2: '',
@@ -86,7 +91,10 @@ const Checkout = () => {
               <div className="row gy-3">
                 {/* Address Form Fields */}
                 {[
-                
+                  { name: "first_name", placeholder: "First Name" },
+                  { name: "last_name", placeholder: "Last Name" },
+                  { name: "email_id", placeholder: "Email Address", type: "email" },
+                  { name: "mobile", placeholder: "Mobile Number" },
                   { name: "addr_field1", placeholder: "Address Line 1" },
                   { name: "addr_field2", placeholder: "Address Line 2" },
                   { name: "addr_field3", placeholder: "City" },

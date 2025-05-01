@@ -1,10 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { CartContext } from '../components/CartContext'; // adjust path if needed
 
-const QuantityControl = ({ initialQuantity = 1 }) => {
+const QuantityControl = ({ initialQuantity = 1, productId, unitId }) => {
     const [quantity, setQuantity] = useState(initialQuantity);
+    const { updateQuantity } = useContext(CartContext);
 
-    const incrementQuantity = () => setQuantity(quantity + 1);
-    const decrementQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : quantity);
+    useEffect(() => {
+        setQuantity(initialQuantity); // keep in sync if prop changes
+    }, [initialQuantity]);
+
+    const incrementQuantity = () => {
+        const newQuantity = quantity + 1;
+        setQuantity(newQuantity);
+        updateQuantity(productId, unitId, newQuantity);
+    };
+
+    const decrementQuantity = () => {
+        const newQuantity = quantity > 1 ? quantity - 1 : 1;
+        setQuantity(newQuantity);
+        updateQuantity(productId, unitId, newQuantity);
+    };
 
     return (
         <div className="d-flex rounded-4 overflow-hidden">

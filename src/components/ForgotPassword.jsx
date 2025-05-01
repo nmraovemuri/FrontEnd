@@ -58,7 +58,7 @@ const ForgotPassword = () => {
             <button type="submit" style={{
               width: '100%',
               padding: '10px',
-              backgroundColor: '#299E60',
+              backgroundColor: '#FF6F00',
               color: 'white',
               border: 'none',
               borderRadius: '4px',

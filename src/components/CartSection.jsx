@@ -1,40 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import QuantityControl from '../helper/QuantityControl'; // Assuming this is a custom component
 import { getCartFromLocal } from '../utils/cart'; // Assuming this retrieves the cart from local storage
+import { CartContext } from './CartContext';
 
 const CartSection = () => {
-    const [cart, setCart] = useState([]);
-    
-    useEffect(() => {
-        const storedCart = getCartFromLocal();
-        setCart(storedCart);
-    }, []);
+    const { cart, removeFromCart }= useContext(CartContext);
+    // useEffect(() => { 
+    //     const storedCart = getCartFromLocal();
+    //     setCart(storedCart);
+    // }, []);
 
     const subtotal = cart.reduce((acc, item) => acc + item.quantity * item.sale_price, 0);
     
     return (
         <>
-            {/* <div className='breadcrumb mb-0 py-26 bg-main-two-50'>
+            <div className='breadcrumb mb-0 py-26 bg-main-two-50'>
                 <div className='container container-lg'>
                     <div className='breadcrumb-wrapper flex-between flex-wrap gap-16'>
-                    <h6 className='mb-0' style={{ textAlign: 'center', width: '100%' }}>Cart</h6>
-
+                        <h6 className='mb-0'>Cart</h6>
                         <ul className='flex-align gap-8 flex-wrap'>
                             <li className='text-sm'>
                                 <Link to='/' className='text-gray-900 flex-align gap-8 hover-text-main-600'>
                                     <i className='ph ph-house' />
-                                    Home 
+                                    Home
                                 </Link>
                             </li>
                             <li className='flex-align'>
                                 <i className='ph ph-caret-right' />
                             </li>
-                            <li className='text-sm text-main-600'>cart </li>
+                            <li className='text-sm text-main-600'>cart</li>
                         </ul>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
             <section className="cart py-80">
                 <div className="container container-lg">
@@ -109,13 +108,13 @@ const CartSection = () => {
                                                             <span className="text-lg h6 mb-0 fw-semibold">₹{item.sale_price}</span>
                                                         </td>
                                                         <td>
-                                                            <QuantityControl initialQuantity={item.quantity} />
+                                                            <QuantityControl initialQuantity={item.quantity} productId={item.product_id} unitId={item.unit_id} />
                                                         </td>
                                                         <td>
                                                             ₹{(item.quantity * item.sale_price).toFixed(2)}
                                                         </td>
                                                         <td>
-                                                            <button className="btn btn-sm btn-danger" title="Remove">
+                                                            <button className="btn btn-sm btn-danger" title="Remove" onClick={() => removeFromCart(item.product_id, item.unit_id)}>
                                                                 <i className="mdi mdi-close-circle-outline"></i>
                                                             </button>
                                                         </td>
@@ -125,7 +124,7 @@ const CartSection = () => {
                                         </tbody>
                                     </table>
                                 </div>
-                                <div className="flex-between flex-wrap gap-16 mt-16">
+                                {/* <div className="flex-between flex-wrap gap-16 mt-16">
                                     <div className="flex-align gap-16">
                                         <input type="text" className="common-input" placeholder="Coupon Code" />
                                         <button type="submit" className="btn btn-main py-18 w-100 rounded-8">
@@ -135,7 +134,7 @@ const CartSection = () => {
                                     <button type="submit" className="text-lg text-gray-500 hover-text-main-600">
                                         Update Cart
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-4">

@@ -39,7 +39,7 @@ const HomePageOne = () => {
 
       {/* ScrollToTop */}
 
-      <ScrollToTop smooth color="#FA6400" />
+      {/* <ScrollToTop smooth color="#FA6400" /> */}
 
       <ScrollToTop smooth color="#299E60" />
 
@@ -102,31 +102,31 @@ const HomePageOne = () => {
 
 
       {/* ProductListOne */}
-      <ProductListOne />
+      {/* <ProductListOne /> */}
 
       {/* OfferOne */}
-      <OfferOne />
+      {/* <OfferOne /> */}
 
       {/* RecommendedOne */}
-      <RecommendedOne />
+      {/* <RecommendedOne /> */}
 
       {/* HotDealsOne */}
-      <HotDealsOne />
+      {/* <HotDealsOne /> */}
 
       {/* TopVendorsOne */}
-      <TopVendorsOne />
+      {/* <TopVendorsOne /> */}
 
       {/* BestSellsOne */}
-      <BestSellsOne />
+      {/* <BestSellsOne /> */}
 
       {/* DeliveryOne */}
-      <DeliveryOne />
+      {/* <DeliveryOne /> */}
 
       {/* OrganicOne */}
-      <OrganicOne />
+      {/* <OrganicOne /> */}
 
       {/* ShortProductOne */}
-      <ShortProductOne />
+      {/* <ShortProductOne /> */}
 
 
       {/* BrandOne */}
@@ -139,7 +139,7 @@ const HomePageOne = () => {
       <ShippingOne />
 
       {/* NewsletterOne */}
-      <NewsletterOne />
+      {/* <NewsletterOne /> */}
 
       {/* FooterOne */}
       <FooterOne />

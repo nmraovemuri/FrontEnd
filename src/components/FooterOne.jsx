@@ -40,7 +40,13 @@ const FooterOne = () => {
                                 >
                                      +91-9989 385 332
                                 </Link>
-                               
+                                {/* <span className="text-md text-main-600 ">or</span>
+                                <Link
+                                    to="/tel: +91-9989 385 332"
+                                    className="text-md text-gray-900 hover-text-main-600"
+                                >
+                                     +91-9989 385 332
+                                </Link> */}
                             </div>
                         </div>
                         <div className="flex-align gap-16 mb-16">
@@ -55,40 +61,84 @@ const FooterOne = () => {
                             </Link>
                         </div>
                     </div>
-                   
                     <div className="footer-item">
-                        <h6 className="footer-item__title">ABOUT US</h6>
+                        {/* <h6 className="footer-item__title">Information</h6>
+                        <ul className="footer-menu"> */}
+                            {/* <li className="mb-16">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
+                                    Become a Vendor
+                                </Link>
+                            </li> */}
+                            {/* <li className="mb-16">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
+                                    Affiliate Program
+                                </Link>
+                            </li> */}
+                            {/* <li className="mb-16">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
+                                    Privacy Policy
+                                </Link>
+                            </li> */}
+                            {/* <li className="mb-16">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
+                                    Our Suppliers
+                                </Link>
+                            </li> */}
+                            {/* <li className="mb-16">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
+                                    Extended Plan
+                                </Link>
+                            </li> */}
+                            {/* <li className="">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
+                                    Community
+                                </Link>
+                            </li> */}
+                        {/* </ul> */}
+                    </div>
+                    <div className="footer-item">
+                        <h6 className="footer-item__title">Customer Support</h6>
                         <ul className="footer-menu">
-                        <li className="mb-16">
-                                <Link to="/faq" className="text-gray-600 hover-text-main-600">
-                                   FAQ
+                            <li className="mb-16">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
+                                    Help Center
                                 </Link>
                             </li>
                             <li className="mb-16">
-                                <Link to="/privacy-policy" className="text-gray-600 hover-text-main-600">
+                                <Link
+                                    to="/contact"
+                                    className="text-gray-600 hover-text-main-600"
+                                >
+                                    Contact Us
+                                </Link>
+                            </li>
+                            {/* <li className="mb-16">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
+                                    Report Abuse
+                                </Link>
+                            </li> */}
+                            {/* <li className="mb-16">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
+                                    Submit and Dispute
+                                </Link>
+                            </li> */}
+                            <li className="mb-16">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
                                     Privacy Policy
                                 </Link>
                             </li>
-                            <li className="mb-16">
-                                <Link to="/terms-conditions" className="text-gray-600 hover-text-main-600">
-                                Terms & Conditions
+                            <li className="">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
+                                    Online Shopping
                                 </Link>
                             </li>
-                            <li className="mb-16">
-                                <Link to="/refund-policy" className="text-gray-600 hover-text-main-600">
-                                Refund & Policy
-                                </Link>
-                            </li>
-                           
-                            
-                            
                         </ul>
                     </div>
                     <div className="footer-item">
                         <h6 className="footer-item__title">My Account</h6>
                         <ul className="footer-menu">
                             <li className="mb-16">
-                                <Link to="/account" className="text-gray-600 hover-text-main-600">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
                                     My Account
                                 </Link>
                             </li>
@@ -98,17 +148,21 @@ const FooterOne = () => {
                                 </Link>
                             </li>
                             <li className="mb-16">
-                                <Link to="/cart" className="text-gray-600 hover-text-main-600">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
                                     Shoping Cart
                                 </Link>
                             </li>
                             
-                            
-                            {/* <li className="">
+                            <li className="mb-16">
+                                <Link to="/shop" className="text-gray-600 hover-text-main-600">
+                                    Help Ticket
+                                </Link>
+                            </li>
+                            <li className="">
                                 <Link to="/wishlist" className="text-gray-600 hover-text-main-600">
                                     Wishlist
                                 </Link>
-                            </li> */}
+                            </li>
                         </ul>
                     </div>
                     <div className="footer-item">

@@ -59,7 +59,7 @@ const SignupActivation = () => {
           </p>
 
           <a
-            href="/login"
+            href="/account"
             style={{
               display: 'block',
               width: '100%',

@@ -108,14 +108,14 @@ const HeaderOne = () => {
 
             <img src='assets/images/logo/logo.png' alt='Logo' />
           </Link>
-          {/* <div className='mobile-menu__menu'>
+          <div className='mobile-menu__menu'>
             <ul className='nav-menu flex-align nav-menu--mobile'>
               {/* Home Menu */}
-              {/* <li onClick={() => handleMenuClick(0)} className={`on-hover-item nav-menu__item has-submenu ${activeIndex === 0 ? "d-block" : ""}`}>
+              <li onClick={() => handleMenuClick(0)} className={`on-hover-item nav-menu__item has-submenu ${activeIndex === 0 ? "d-block" : ""}`}>
                 <Link to='#' className='nav-menu__link'>Home</Link>
               </li>
             </ul>
-          </div> */} 
+          </div>
         </div>
       </div>
 
@@ -124,32 +124,32 @@ const HeaderOne = () => {
         <div className='container container-lg'>
           <div className='flex-between flex-wrap gap-8'>
             <ul className='flex-align flex-wrap d-none d-md-flex'>
-              {/* <li className='border-right-item'><Link to='#' className='text-white text-sm hover-text-decoration-underline'>Become A Seller</Link></li> */}
+              <li className='border-right-item'><Link to='#' className='text-white text-sm hover-text-decoration-underline'>Become A Seller</Link></li>
               <li className='border-right-item'><Link to='#' className='text-white text-sm hover-text-decoration-underline'>About Us</Link></li>
               <li className='border-right-item'><Link to='#' className='text-white text-sm hover-text-decoration-underline'>Free Delivery</Link></li>
               <li className='border-right-item'><Link to='#' className='text-white text-sm hover-text-decoration-underline'>Returns Policy</Link></li>
             </ul>
-             <ul className='header-top__right flex-align flex-wrap'>
+            <ul className='header-top__right flex-align flex-wrap'>
               <li className='on-hover-item border-right-item border-right-item-sm-space has-submenu arrow-white'>
-                {/* <Link to='#' className='text-white text-sm py-8'>Help Center</Link> */}
+                <Link to='#' className='text-white text-sm py-8'>Help Center</Link>
                 <ul className='on-hover-dropdown common-dropdown common-dropdown--sm max-h-200 scroll-sm px-0 py-8'>
-                  {/* <li className='nav-submenu__item'>
+                  <li className='nav-submenu__item'>
                     <Link to='#' className='nav-submenu__link hover-bg-gray-100 text-gray-500 text-xs py-6 px-16 flex-align gap-8 rounded-0'>
                       <span className='text-sm d-flex'><i className='ph ph-headset' /></span>
                       Call Center
                     </Link>
-                  </li> */}
-                  {/* <li className='nav-submenu__item'>
+                  </li>
+                  <li className='nav-submenu__item'>
                     <Link to='#' className='nav-submenu__link hover-bg-gray-100 text-gray-500 text-xs py-6 px-16 flex-align gap-8 rounded-0'>
                       <span className='text-sm d-flex'><i className='ph ph-chat-circle-dots' /></span>
                       Live Chat
                     </Link>
-                  </li> */}
+                  </li>
                 </ul>
               </li>
 
               {/* Language Selector */}
-              {/* <li className='on-hover-item border-right-item border-right-item-sm-space has-submenu arrow-white'>
+              <li className='on-hover-item border-right-item border-right-item-sm-space has-submenu arrow-white'>
                 <Link to='#' className='selected-text text-white text-sm py-8'>{selectedLanguage}</Link>
                 <ul className='selectable-text-list on-hover-dropdown common-dropdown common-dropdown--sm max-h-200 scroll-sm px-0 py-8'>
                   {["English", "Japan", "French", "Germany", "Bangladesh", "South Korea"].map(lang => (
@@ -161,10 +161,10 @@ const HeaderOne = () => {
                     </li>
                   ))}
                 </ul>
-              </li> */}
+              </li>
 
               {/* Currency Selector */}
-              {/* <li className='on-hover-item border-right-item border-right-item-sm-space has-submenu arrow-white'>
+              <li className='on-hover-item border-right-item border-right-item-sm-space has-submenu arrow-white'>
                 <Link to='#' className='selected-text text-white text-sm py-8'>{selectedCurrency}</Link>
                 <ul className='selectable-text-list on-hover-dropdown common-dropdown common-dropdown--sm max-h-200 scroll-sm px-0 py-8'>
                   {["USD", "Yen", "Franc", "EURO", "BDT", "WON"].map(curr => (
@@ -176,16 +176,16 @@ const HeaderOne = () => {
                     </li>
                   ))}
                 </ul>
-              </li> */}
+              </li>
 
               {/* Account Link */}
-              {/* <li className='border-right-item'>
+              <li className='border-right-item'>
                 <Link to='/account' className='text-white text-sm py-8 flex-align gap-6'>
                   <span className='icon text-md d-flex'><i className='ph ph-user-circle' /></span>
                   <span className='hover-text-decoration-underline'>My Account</span>
                 </Link>
-              </li> */}
-            </ul> 
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -239,33 +239,31 @@ const HeaderOne = () => {
                     <i className='ph ph-magnifying-glass' />
                   </span>
                 </button>
-                <Link to='/login' className='flex-align gap-4 item-hover'>
-                <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
-                  <i className='mdi mdi-account-circle' /></span>
-                <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>
-                  Login</span>
-              </Link>
-                <Link to='/register' className='flex-align gap-4 item-hover'>
-                <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
-                  <i className='mdi mdi-account-circle' /></span>
-                <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>
-                  Register</span>
-              </Link>
-                <Link to='/cart' className='flex-align gap-4 item-hover'>
+                <Link to='/wishlist' className='flex-align gap-4 item-hover'>
                   <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
-                    <i className='mdi mdi-cart' />
+                    <i className='ph ph-heart' />
                     <span className='w-16 h-16 flex-center rounded-circle bg-main-600 text-white text-xs position-absolute top-n6 end-n4'>2</span>
                   </span>
-                  <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'> My Cart </span>
+                  <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>Wishlist</span>
+                </Link>
+                <Link to='/cart' className='flex-align gap-4 item-hover'>
+                  <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
+                    <i className='ph ph-shopping-cart-simple' />
+                    <span className='w-16 h-16 flex-center rounded-circle bg-main-600 text-white text-xs position-absolute top-n6 end-n4'>2</span>
+                  </span>
+                  <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>Cart</span>
                 </Link>
 
-               
-              <Link to='/myaddress' className='flex-align gap-4 item-hover'>
+                <Link to='/logout' className='flex-align gap-4 item-hover'>
                 <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
-                  <i className='ph ph-user' /></span>
+                  <i className='ph ph-user' />
+                
+                </span>
                 <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>
-                  My Address</span>
+                  Logout
+                </span>
               </Link>
+
 
               </div>
             </div>
@@ -281,7 +279,11 @@ const HeaderOne = () => {
             <div className='flex-align menu-category-wrapper'>
               {/* /* Category Dropdown */}
                <div className='category on-hover-item'>
-              
+                {/* <button onClick={toggleCategory} type='button' className='category__button flex-align gap-8 fw-medium p-16 border-end border-start border-gray-100 text-heading'>
+                  <span className='icon text-2xl d-xs-flex d-none'><i className='ph ph-dots-nine' /></span>
+                  <span className='d-sm-flex d-none'>All</span> Categories
+                  <span className='arrow-icon text-xl d-flex'><i className='ph ph-caret-down' /></span>
+                </button> */}
                 <div className={`responsive-dropdown cat on-hover-dropdown common-dropdown nav-submenu p-0 submenus-submenu-wrapper ${activeCategory ? "active" : ""}`}>
                   {/* Close Button */}
                    <button onClick={() => { toggleCategory(); setActiveIndexCat(null); }} type='button' className='close-responsive-dropdown rounded-circle text-xl position-absolute inset-inline-end-0 inset-block-start-0 mt-4 me-8 d-lg-none d-flex'>
@@ -292,11 +294,45 @@ const HeaderOne = () => {
                       <img src='assets/images/logo/logo.png' alt='Logo' />
                     </Link>
                   </div>
-                  
+                  {/* <ul className='scroll-sm p-0 py-8 w-300 max-h-400 overflow-y-auto'>
+                    {[ 
+                      { title: 'Vegetables & Fruit', icon: 'ph-carrot', links: ['Potato & Tomato', 'Cucumber & Capsicum', 'Leafy Vegetables', 'Root Vegetables', 'Beans & Okra', 'Cabbage & Cauliflower', 'Gourd & Drumstick', 'Specialty'] },
+                      { title: 'Beverages', icon: 'ph-brandy', links: ['Soda & Cocktail Mix', 'Sports & Energy Drinks', 'Non-Alcoholic Drinks', 'Packaged Water', 'Spring Water', 'Flavoured Water'] },
+                      { title: 'Meats & Seafood', icon: 'ph-brandy', links: ['Fresh Meat', 'Frozen Meat', 'Marinated Meat', 'Fresh & Frozen Meat'] },
+                      { title: 'Breakfast & Dairy', icon: 'ph-brandy', links: ['Oats & Porridge', 'Kids Cereal', 'Muesli', 'Flakes', 'Granola & Cereal Bars', 'Instant Noodles'] },
+                      { title: 'Frozen Foods', icon: 'ph-brandy', links: ['Instant Noodles', 'Hakka Noodles', 'Cup Noodles', 'Vermicelli', 'Instant Pasta'] },
+                      { title: 'Biscuits & Snacks', icon: 'ph-brandy', links: ['Salted Biscuits', 'Marie, Health, Digestive', 'Cream Biscuits & Wafers', 'Glucose & Milk biscuits', 'Cookies'] },
+                      { title: 'Grocery & Staples', icon: 'ph-brandy', links: ['Lemon, Ginger & Garlic', 'Indian & Exotic Herbs', 'Organic Vegetables', 'Organic Fruits', 'Organic Dry Fruits', 'Organic Dals & Pulses', 'Organic Millet & Flours'] },
+                    ].map((cat, index) => (
+                      <li key={index} onClick={() => handleCatClick(index)} className={`has-submenus-submenu ${activeIndexCat === index ? "active" : ""}`}>
+                        <Link to='#' className='text-gray-500 text-15 py-12 px-16 flex-align gap-8 rounded-0'>
+                          <span className='text-xl d-flex'><i className={`ph ${cat.icon}`} /></span>
+                          <span>{cat.title}</span>
+                          <span className='icon text-md d-flex ms-auto'><i className='ph ph-caret-right' /></span>
+                        </Link>
+                        <div className={`submenus-submenu py-16 ${activeIndexCat === index ? "open" : ""}`}>
+                          <h6 className='text-lg px-16 submenus-submenu__title'>{cat.title}</h6>
+                          <ul className='submenus-submenu__list max-h-300 overflow-y-auto scroll-sm'>
+                            {cat.links.map((link, linkIndex) => (
+                              <li key={linkIndex}>
+                                <Link to='/shop'>{link}</Link>
+                              </li>
+                            ))}
+                          </ul> */}
+                        {/* </div> 
+                       </li>
+                    ))}
+                  </ul> */}
                 </div>
               </div> 
               {/* Menu Start */}
-             
+              {/* <div class="navbar">
+             <a href="#">Personal Care</a>
+          <a href="#">Beverages</a>
+          <a href="#"> Baby Care </a>
+          <a href="#"> Fruits & Vegetables </a>
+          
+            </div> */}
 
               
               <div className='header-menu d-lg-block d-none'>
@@ -340,7 +376,9 @@ const HeaderOne = () => {
 
             {/* Header Right */}
             <div className='header-right flex-align'>
-             
+              <Link to='/tel:+91-9989-385-332' className='bg-main-600 text-white p-12 h-100 hover-bg-main-800 flex-align gap-8 text-lg d-lg-flex d-none'>
+                <div className='d-flex text-32'><i className='ph ph-phone-call' /></div> +91-9989 385 332
+              </Link>
               <div className='me-16 d-lg-none d-block'>
                 <div className='flex-align flex-wrap gap-12'>
                   <button onClick={toggleSearch} type='button' className='search-icon flex-align d-lg-none d-flex gap-4 item-hover'>
@@ -348,7 +386,6 @@ const HeaderOne = () => {
                       <i className='ph ph-magnifying-glass' />
                     </span>
                   </button>
-                  
                   <Link to='/wishlist' className='flex-align gap-4 item-hover'>
                     <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
                       <i className='ph ph-heart' />
@@ -356,7 +393,6 @@ const HeaderOne = () => {
                     </span>
                     <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>Wishlist</span>
                   </Link>
-                  
                   <Link to='/cart' className='flex-align gap-4 item-hover'>
                     <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
                       <i className='ph ph-shopping-cart-simple' />

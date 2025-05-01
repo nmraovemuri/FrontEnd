@@ -65,24 +65,23 @@ export const customerApi = createApi({
       }),
     }),
          
-    // POST - Change Password
-    customerChangePassword: builder.mutation({
-      query: ({ customer_id, old_password, new_password }) => ({
-        url: '/customer_change_password',
-        method: 'POST',
-        body: { customer_id, old_password, new_password },
-      }),
-    }),
-    
+    // // POST - Change Password
+    // customerChangePassword: builder.mutation({
+    //   query: ({ oldPassword, newPassword }) => ({
+    //     url: '/customer_change_password',
+    //     method: 'POST',
+    //     body: { oldPassword, newPassword }, // Pass old and new password for change
+    //   }),
+    // }),
 
-    // POST - Update Profile
-    updateCustomerProfile: builder.mutation({
-      query: (profileData) => ({
-        url: '/updateCustomerProfile',
-        method: 'POST',
-        body: profileData, // Passing the profile update data
-      }),
-    }),
+    // // POST - Update Profile
+    // updateCustomerProfile: builder.mutation({
+    //   query: (profileData) => ({
+    //     url: '/updateCustomerProfile',
+    //     method: 'POST',
+    //     body: profileData, // Passing the profile update data
+    //   }),
+    // }),
     // POST - Update Customer Address
     updateCustomerAddress: builder.mutation({
       query: (addressData) => ({
@@ -109,8 +108,8 @@ export const {
   useCustomerSignInMutation,
   useCustomerForgotPasswordMutation,
   useCustomerResetPasswordMutation,
-  useCustomerChangePasswordMutation,
-  useUpdateCustomerProfileMutation,
+  // useCustomerChangePasswordMutation,
+  // useUpdateCustomerProfileMutation,
   
   useUpdateCustomerAddressMutation, 
   useGetCustomerShippingAddressQuery,

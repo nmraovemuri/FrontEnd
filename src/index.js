@@ -32,21 +32,8 @@ import VendorTwoDetailsPage from "./pages/VendorTwoDetailsPage";
 import FeatureOne from "./components/FeatureOne";
 import TestingData from "./components/TestingData";
 import SearchPage from "./pages/SearchPage";
-import CartProvider from "./components/CartContext";
-import PrivacyPolicy from './components/PrivacyPolicy';
-import TermsConditions from './components/TermsConditions';
-import RefundPolicy from "./components/RefundPolicy";
-import Faq from "./components/Faq"
-import Register from "./components/Register";
-import Login from "./components/Login";
-import ForgotPassword from "./components/ForgotPassword";
-import SignupActivation from "./components/SignupActivation"
-import MyAddress from "./components/MyAddress";
-import Logout from "./components/Logout"
-import MyProfile from "./components/MyProfile";
-import ChangePassword from "./components/ChangePassword";
-import ResetPassword from "./components/ResetPassword";
-import Navigation from "./components/Navigation";
+import { CartProvider } from "./components/CartContext";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -131,62 +118,6 @@ const router = createBrowserRouter([
       {
         path: "/categories",
         element: <TestingData/>,
-      },
-      {
-        path: "/privacy-policy",
-        element: <PrivacyPolicy/>,
-      },
-      {
-        path: "/terms-conditions",
-        element: <TermsConditions/>,
-      },
-      {
-        path: "/refund-policy",
-        element: <RefundPolicy/>,
-      },
-      {
-        path: "/signupactivation",
-        element: <SignupActivation/>,
-      },
-      {
-        path: "/forgotpassword",
-        element: <ForgotPassword/>,
-      },
-      {
-        path: "/login",
-        element: <Login/>,
-      },
-      {
-        path: "/register",
-        element: <Register/>,
-      },
-      {
-        path: "/resetpassword",
-        element: <ResetPassword/>,
-      },
-      {
-        path: "/faq",
-        element: <Faq/>,
-      },
-      {
-        path: "/myaddress",
-        element: <MyAddress/>,
-      },
-      {
-        path: "/logout",
-        element: <Logout/>,
-      },
-      {
-        path: "/myprofile",
-        element: <MyProfile/>,
-      },
-      {
-        path: "/changepassword",
-        element: <ChangePassword/>,
-      },
-      {
-        path: "/navigation",
-        element: <Navigation/>,
       },
     ]
   }
