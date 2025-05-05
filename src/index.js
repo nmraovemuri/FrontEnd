@@ -11,6 +11,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 import HomePageOne from "./pages/HomePageOne";
 import HomePageTwo from "./pages/HomePageTwo";
 import HomePageThree from "./pages/HomePageThree";
@@ -43,7 +45,7 @@ import ForgotPassword from "./components/ForgotPassword";
 import SignupActivation from "./components/SignupActivation"
 import MyAddress from "./components/MyAddress";
 import Logout from "./components/Logout"
-import MyProfile from "./components/MyProfile";
+import MyProfile from "./components/MyProfile"
 import ChangePassword from "./components/ChangePassword";
 import ResetPassword from "./components/ResetPassword";
 
@@ -161,7 +163,7 @@ const router = createBrowserRouter([
         element: <Register/>,
       },
       {
-        path: "/resetpassword",
+        path : '/customer_reset_password/:customer_id',
         element: <ResetPassword/>,
       },
       {
@@ -173,13 +175,14 @@ const router = createBrowserRouter([
         element: <MyAddress/>,
       },
       {
+        path: "/my-profile",
+        element: <MyProfile/>,
+      },
+      {
         path: "/logout",
         element: <Logout/>,
       },
-      {
-        path: "/myprofile",
-        element: <MyProfile/>,
-      },
+     
       {
         path: "/changepassword",
         element: <ChangePassword/>,

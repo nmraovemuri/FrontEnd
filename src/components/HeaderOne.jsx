@@ -13,6 +13,7 @@ const HeaderOne = () => {
   const [scroll, setScroll] = useState(false);
   var {isLoading,data}=useGetAllSubCategoriesByCategoriesQuery()
   var [findSearchStringsfn]=useSearchStringsMutation()
+  
   var searchform=useFormik({
     initialValues: {
       searchtext: ''
@@ -20,6 +21,7 @@ const HeaderOne = () => {
     onSubmit: values => {
         navigate(`/search/${values.searchtext}`)
     },
+    
   });
 
   // Set scroll effect
@@ -285,9 +287,11 @@ const HeaderOne = () => {
                
               <Link to='/myaddress' className='flex-align gap-4 item-hover'>
                 <span className='text-2xl text-gray-700 d-flex position-relative me-6 mt-6 item-hover__text'>
-                  <i className='ph ph-user' /></span>
+                   {/* <i className='ph ph-user' /> */}
+                  </span>
                 <span className='text-md text-gray-500 item-hover__text d-none d-lg-flex'>
                 {firstName}</span>
+                
               </Link>
 
               </div>
